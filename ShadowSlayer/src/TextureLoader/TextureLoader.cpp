@@ -5,15 +5,15 @@
 //		WIC ( Windows Imaging Component ) and 
 //		creates 2D Textures
 //
-#include "stdafx.h"
+#include "..\stdafx\stdafx.h"
 #include <stdio.h>
 #include <D3D11.h>
 #include <D2D1.h>
 #include <ddraw.h>
 #include <wincodec.h>
 #include "TextureLoader.h"
-#include "ddsfunctions.h"
-#include "tgafunctions.h"
+#include "..\ddsfunctions\ddsfunctions.h"
+#include "..\tgafunctions\tgafunctions.h"
 
 #undef SAFE_RELEASE
 #undef SAFE_DELETE

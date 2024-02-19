@@ -1,15 +1,15 @@
 // Windowsアプリケーション開発用の共通ヘッダファイル
-#include "stdafx.h"
+#include "..\stdafx\stdafx.h"
 // Direct2Dのヘッダファイルをインクルード
 #include <d2d1.h>
 // ゲームの背景を管理するクラスと関連データを定義
 #include "BG.h"
 // テクスチャとビットマップの読み込みと管理に関するクラスとインターフェースを定義
-#include "TextureLoader.h"
+#include "..\TextureLoader\TextureLoader.h"
 // ゲーム内のマップデータを定義
-#include "MapData.h"
+#include "..\MapData\MapData.h"
 // 定数値を定めたヘッダファイル
-#include "Constants.h"
+#include "..\Constants.h"
 
 
 //  マクロ定義

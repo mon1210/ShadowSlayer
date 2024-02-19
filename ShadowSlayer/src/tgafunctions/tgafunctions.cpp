@@ -1,13 +1,13 @@
 //
 //	TrueVision Targa format module
 //
-#include "stdafx.h"
+#include "..\stdafx\stdafx.h"
 #include <stdio.h>
 #include <D3D11.h>
 #include <D2D1.h>
 #include <ddraw.h>
 #include <wincodec.h>
-#include "TextureLoader.h"
+#include "..\TextureLoader\TextureLoader.h"
 #include "tgafunctions.h"
 
 //

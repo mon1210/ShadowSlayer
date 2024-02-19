@@ -4,19 +4,19 @@
 */
 
 // Windowsアプリケーション開発用の共通ヘッダファイル
-#include "stdafx.h"
+#include "..\stdafx\stdafx.h"
 // Direct2Dのヘッダファイルをインクルード
 #include <d2d1.h>
 // DirectWrite ヘッダーファイルをインクルード
 #include <dwrite.h>
 // ゲームシーンとセレクターの管理に関連するヘッダファイル
-#include "Selector.h"
+#include "..\Selector\Selector.h"
 // タイトル画面のゲームシーンを管理するヘッダファイル
 #include "Title.h"
 // テクスチャとビットマップの読み込みと管理に関するクラスとインターフェースを定義
-#include "TextureLoader.h"
+#include "..\TextureLoader\TextureLoader.h"
 // 定数値を定めたヘッダファイル
-#include "Constants.h"
+#include "..\Constants.h"
 
 
 /**

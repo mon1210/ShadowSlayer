@@ -1,11 +1,11 @@
 // Windowsアプリケーション開発用の共通ヘッダファイル
-#include "stdafx.h"
+#include "..\stdafx\stdafx.h"
 // 敵の攻撃とプレイヤーの当たり判定処理を行うクラスと関連する定数・列挙型の定義
 #include "EnemyAttackCollision.h"
 // プレイヤーキャラクターとその関連情報を定義したクラスと定数/列挙型の定義
-#include "Player.h"
+#include "..\Player\Player.h"
 // 定数値を定めたヘッダファイル
-#include "Constants.h"
+#include "..\Constants.h"
 
 
 // ヘッダガードを使用して二度のインクルードを防ぐ

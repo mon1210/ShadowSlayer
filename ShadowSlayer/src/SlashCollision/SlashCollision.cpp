@@ -1,13 +1,13 @@
 // Windowsアプリケーション開発用の共通ヘッダファイル
-#include "stdafx.h"
+#include "..\stdafx\stdafx.h"
 // スラッシュコリジョン（プレイヤーの攻撃の当たり判定）クラスの宣言
 #include "SlashCollision.h"
 // プレイヤーキャラクターとその関連情報を定義したクラスと定数/列挙型の定義
-#include "Player.h"
+#include "..\Player\Player.h"
 // 定数値を定めたヘッダファイル
-#include "Constants.h"
+#include "..\Constants.h"
 // enum変数宣言用フォルダ
-#include "Enums.h"
+#include "..\Enums.h"
 
 
 //--- ヘッダガードを使って二度のインクルードを防ぐ

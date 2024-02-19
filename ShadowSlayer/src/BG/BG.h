@@ -1,5 +1,5 @@
 //ゲーム上のオブジェクトを表現するクラスを汎化したインターフェースの宣言
-#include "IGameObject.h"
+#include "..\IGameObject\IGameObject.h"
 
 struct ID2D1Bitmap;
 struct ID2D1RenderTarget;

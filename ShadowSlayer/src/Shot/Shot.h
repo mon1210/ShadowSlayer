@@ -2,7 +2,7 @@
 * @file Shot.h
 * @brief クラス CShot の宣言ファイル
 */
-#include "IGameObject.h"
+#include "..\IGameObject\IGameObject.h"
 
 struct ID2D1Bitmap;
 class Stage;

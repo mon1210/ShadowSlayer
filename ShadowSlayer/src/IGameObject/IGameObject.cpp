@@ -4,7 +4,7 @@
 */
 
 // Windowsアプリケーション開発用の共通ヘッダファイル
-#include "stdafx.h"
+#include "..\stdafx\stdafx.h"
 // ゲームオブジェクトの共通インターフェースと関連するマクロ定義
 #include "IGameObject.h"
 

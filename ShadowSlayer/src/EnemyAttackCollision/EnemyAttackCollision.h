@@ -2,7 +2,7 @@
 * @file EnemyAttackCollision.h
 * @brief ƒvƒŒƒCƒ„[‚Ì‹ßÚUŒ‚‚Ì“–‚½‚è”»’è
 */
-#include "IGameObject.h"
+#include "..\IGameObject\IGameObject.h"
 
 class Player;
 struct ID2D1SolidColorBrush;

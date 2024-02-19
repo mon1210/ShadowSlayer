@@ -3,7 +3,7 @@
 * @brief クラス CEnemy01(スライム) の宣言
 * @note	当たり判定 32 x 25.5
 */
-#include "IGameObject.h"
+#include "..\IGameObject\IGameObject.h"
 
 class Stage;
 class BG;

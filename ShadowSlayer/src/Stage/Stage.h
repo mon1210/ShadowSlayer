@@ -2,9 +2,9 @@
 * @file Stage.h
 * @brief ƒNƒ‰ƒX CStage ‚ÌéŒ¾
 */
-#include "Selector.h"
+#include "..\Selector\Selector.h"
 #include <list>
-#include "IGameObject.h"
+#include "..\IGameObject\IGameObject.h"
 
 class Player;
 class BG;

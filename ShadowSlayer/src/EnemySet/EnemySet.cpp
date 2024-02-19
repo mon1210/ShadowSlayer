@@ -1,9 +1,9 @@
 // Windowsアプリケーション開発用の共通ヘッダファイル
-#include "stdafx.h"
+#include "..\stdafx\stdafx.h"
 // 敵キャラクターセットアップと管理に関するクラスとデータの定義
 #include "EnemySet.h"
 // ゲーム内の敵キャラクタークラスと関連する定数・列挙型の定義
-#include "Enemy01.h"
+#include "..\Enemy01\Enemy01.h"
 
 
 /**

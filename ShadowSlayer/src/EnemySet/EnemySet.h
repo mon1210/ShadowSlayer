@@ -2,7 +2,7 @@
 * @file EnemySet.h
 * @brief	クラス CEnemySet の宣言ファイル
 */
-#include "IGameObject.h"
+#include "..\IGameObject\IGameObject.h"
 
 class Stage;
 class BG;

@@ -9,7 +9,7 @@
 */
 
 // Windowsアプリケーション開発用の共通ヘッダファイル
-#include "stdafx.h"
+#include "..\stdafx\stdafx.h"
 // CRT デバッグヘッダファイルをインクルード
 #include <crtdbg.h>
 // TCHAR タイプやマクロを定義したヘッダファイルをインクルード
@@ -21,9 +21,9 @@
 // DirectWrite ヘッダーファイルをインクルード
 #include <dwrite.h>
 // ゲームシーンとセレクターの管理に関連するヘッダファイル
-#include "Selector.h"
+#include "..\Selector\Selector.h"
 // 定数値を定めたヘッダファイル
-#include "Constants.h"
+#include "..\Constants.h"
 
 #pragma comment(lib,"d2d1.lib")		//	direct2d に必要
 #pragma comment(lib,"dwrite.lib")	//	文字表示に必要

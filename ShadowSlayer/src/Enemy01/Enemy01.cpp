@@ -1,21 +1,21 @@
 // Windowsアプリケーション開発用の共通ヘッダファイル
-#include "stdafx.h"
+#include "..\stdafx\stdafx.h"
 // Direct2Dのヘッダファイルをインクルード
 #include <d2d1.h>
 // ゲーム内のステージ関連クラスと列挙型の定義
-#include "Stage.h"
+#include "..\Stage\Stage.h"
 // ゲームの背景を管理するクラスと関連データを定義
-#include "BG.h"
+#include "..\BG\BG.h"
 // ゲーム内の敵キャラクタークラスと関連する定数・列挙型の定義
 #include "Enemy01.h"
 // テクスチャとビットマップの読み込みと管理に関するクラスとインターフェースを定義
-#include "TextureLoader.h"
+#include "..\TextureLoader\TextureLoader.h"
 // 敵の攻撃とプレイヤーの当たり判定処理を行うクラスと関連する定数・列挙型の定義
-#include "EnemyAttackCollision.h"
+#include "..\EnemyAttackCollision\EnemyAttackCollision.h"
 // 定数値を定めたヘッダファイル
-#include "Constants.h"
+#include "..\Constants.h"
 // enum変数宣言用フォルダ
-#include "Enums.h"
+#include "..\Enums.h"
 
 
 ID2D1Bitmap *Enemy01::m_pTexture = NULL;

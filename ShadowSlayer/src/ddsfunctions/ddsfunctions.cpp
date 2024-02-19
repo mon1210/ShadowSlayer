@@ -3,7 +3,7 @@
 //
 //	Cube map is not supported now
 //
-#include "stdafx.h"
+#include "..\stdafx\stdafx.h"
 #include <stdio.h>
 #include <D3D11.h>
 #include <D2D1.h>
