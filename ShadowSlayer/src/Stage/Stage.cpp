@@ -28,10 +28,7 @@
 #include "..\Constants.h"
 
 
-/**
-* @brief Shotのコンストラクタ
-*/
-//float Stage::m_fMapHight;
+// コンストラクタ
 Stage::Stage(Selector *pSystem)
 {
 	ID2D1RenderTarget *pTarget = NULL;
@@ -172,11 +169,7 @@ Stage::~Stage()
 }
 
 
-/**
-* @brief アニメーション(1フレーム)の実行
-* @note 処理の順番は オブジェクトを move してから各々 collide を取って、必要なら各座標を調整する
-* @return GAMESCENE_DEFAULT: 継続 / GAMESCENE_END_FAILURE: ゲームオーバー
-*/
+// アニメーション(1フレーム)の実行
 GameSceneResultCode Stage::move() {
 
 	switch (m_ePhase) {
@@ -466,10 +459,7 @@ GameSceneResultCode Stage::move() {
 }
 
 
-/**
-* @brief	各種オブジェクトのクリア
-* @note		マップ遷移時に使用
-*/
+// 各種オブジェクトのクリア
 void Stage::clearGameObjects() {
 	// 全shotの強制削除
 	if (m_pShots) {
@@ -510,10 +500,7 @@ void Stage::clearGameObjects() {
 }
 
 
-/**
-* @brief	次マップに使うデータ・オブジェクトを設定
-* @note		m_pBGを更新してからこの関数を呼ぶように
-*/
+// 次マップに使うデータ・オブジェクトを設定
 void Stage::setGameObjects() {
 	// enumMapNum変数でマップ移動後のプレイヤー描描画を場合分け
 	switch (m_eMapNum) {
@@ -544,10 +531,7 @@ void Stage::setGameObjects() {
 }
 
 
-/**
-* @brief 描画処理
-* @note  現在のマップと次のマップを動かしながら描画することで移動しているように見せる
-*/
+// 描画処理
 void Stage::draw(ID2D1RenderTarget *pRenderTarget) {
 
 	switch (m_ePhase) {
@@ -705,11 +689,7 @@ void Stage::addEnemyAttacks(IGameObject *pObj) {
 }
 
 
-/**
-* @brief ID2D1RenderTarget を取得して返す
-* @note このメソッドで受け取った RenderTarget は使用後必ずRelease すること
-* @return ID2D1RenderTarget オブジェクト
-*/
+// ID2D1RenderTarget を取得して返す
 ID2D1RenderTarget *Stage::GetRenderTarget() {
 	ID2D1RenderTarget *result = NULL;
 	if (m_pSystem) {

@@ -1,8 +1,3 @@
-/**
-* @file GameOver.cpp
-* @brief クラス CGameOVer の実装
-*/
-
 // Windowsアプリケーション開発用の共通ヘッダファイル
 #include "..\stdafx\stdafx.h"
 // Direct2Dのヘッダファイルをインクルード
@@ -19,9 +14,7 @@
 #include "..\Constants.h"
 
 
-/**
-* @brief GameOverのコンストラクタ
-*/
+// コンストラクタ
 GameOver::GameOver(Selector *pSystem)
 {
 	m_pSystem = pSystem;
@@ -49,10 +42,7 @@ GameOver::~GameOver()
 }
 
 
-/**
-* @brief アニメーションメソッド
-* @return GAMESCENE_DEFAULT:継続 / GAMESCENE_END_OK:ゲーム開始
-*/
+// アニメーションメソッド
 GameSceneResultCode GameOver::move() {
 	switch (m_ePhase) {
 
@@ -105,9 +95,7 @@ GameSceneResultCode GameOver::move() {
 }
 
 
-/**
-* @brief 描画メソッド
-*/
+// 描画メソッド
 void GameOver::draw(ID2D1RenderTarget *pRenderTarget) {
 	D2D1_RECT_F rc;		// 描画領域(画面上での位置やサイズ)を指定する変数
 	D2D1_SIZE_F screenSize, textureSize;

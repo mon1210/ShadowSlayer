@@ -6,9 +6,7 @@
 #include "..\Enemy01\Enemy01.h"
 
 
-/**
-* @brief EnemySetのコンストラクタ
-*/
+// コンストラクタ
 EnemySet::EnemySet(Stage *pParent)
 {
 	m_iIndex = 0;
@@ -22,30 +20,19 @@ EnemySet::~EnemySet()
 }
 
 
-/**
-* @fn
-* @brief	共有メディアファイルの読み込み
-* @note		シーン開始時などに呼び出すようにする
-*/
+// 共有メディアファイルの読み込み
 void EnemySet::Restore(ID2D1RenderTarget *pRT, BG *pBG) {
 	Enemy01::Restore(pRT, pBG);
 }
 
 
-/**
-* @fn
-* @brief	共有メディアファイルの消去
-* @note		シーン削除時などに呼び出すようにする
-*/
+// 共有メディアファイルの消去
 void EnemySet::Finalize() {
 	Enemy01::Finalize();
 }
 
 
-/*
-* @brief エネミー配置メソッド
-* @note  引数の数値以下でセットデータを呼び出してエネミーを配置
-*/ 
+// エネミー配置メソッド
 IGameObject* EnemySet::GetEnemyToSet(int x) {
 	IGameObject *pObj = NULL;
 	int sx, sy;
@@ -70,7 +57,6 @@ IGameObject* EnemySet::GetEnemyToSet(int x) {
 /*
 *	敵セットデータ
 */
-
 //	出現 X座標, Y座標, 敵種類
 SHORT EnemySet::m_pSetData[] = {
 	150, 160, 1,

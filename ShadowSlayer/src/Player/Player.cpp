@@ -20,9 +20,7 @@
 #include "..\Enums.h"
 
 
-/**
-* @brief Playerのコンストラクタ
-*/
+// コンストラクタ
 Player::Player(Stage *pParent, BG *pBG)
 {
 	ID2D1RenderTarget *pTarget = NULL;
@@ -104,11 +102,7 @@ Player::~Player()
 }
 
 
-/**
-* @brief プレイヤーのアニメーションメソッド
-* @return true:生存 / false:死亡
-* @note ここでは加速度の設定だけ行い、(x, y)座標の更新はcollide() で行う
-*/
+// プレイヤーのアニメーションメソッド
 bool Player::move() {
 	if (m_fHP <= 0)
 	{
@@ -469,7 +463,7 @@ bool Player::move() {
 	// 空中時の処理
 	if(m_iPlayerStateFlag & PFG_JUMP){
 		// ひとつ前のフレームに重力を足して次のフレームの座標を計算
-		SetVY(m_fY - m_fY_prev + GRAVITY);
+		setVY(m_fY - m_fY_prev + GRAVITY);
 		if (m_fVY > FALL_SPEED_MAX)
 			m_fVY = FALL_SPEED_MAX;	// 落下速度制限
 		m_fY_prev = m_fY;
@@ -532,9 +526,7 @@ bool Player::move() {
 }
 
 
-/**
-* @brief 描画メソッド
-*/
+// 描画メソッド
 void Player::draw(ID2D1RenderTarget *pRenderTarget) {
 
 	D2D1_RECT_F rc,		// 描画領域(画面上での位置やサイズ)を指定する変数
@@ -827,14 +819,7 @@ void Player::draw(ID2D1RenderTarget *pRenderTarget) {
 }
 
 
-/**
-* @brief 矩形との当たり判定メソッド
-* @param[in] x 左上のx座標
-* @param[in] y 左上のy座標
-* @param[in] w 矩形のWidth
-* @param[in] h 矩形のHeight
-* @return true:当たり / false:外れ
-*/
+// 矩形との当たり判定メソッド
 bool Player::collide(float x, float y, float w, float h) {
 
 	if (m_fPl > x + w)
@@ -850,11 +835,7 @@ bool Player::collide(float x, float y, float w, float h) {
 }
 
 
-/**
-* @brief 他ゲームオブジェクトとの当たり判定メソッド
-* @param[in] *pObj 他ゲームオブジェクト
-* @return true:当たり / false:外れ
-*/
+// 他ゲームオブジェクトとの当たり判定メソッド
 bool Player::collide(IGameObject *pObj) {
 	if (m_bDamage || m_iShadowStateFlag & SFG_SWITCH) {
 		return false;
@@ -864,14 +845,7 @@ bool Player::collide(IGameObject *pObj) {
 }
 
 
-/**
-* @brief マップとの当たり判定メソッド
-* @note	ここで当たり判定に従って(x, y)座標の更新を行う
-*		X方向とY方向で分離して判定。
-*		ポイント①: それぞれ加速度の正負で左右、上下に判定を分ける
-*		ポイント②: 判定する方向のみ座標を移動させ、判定しない方向は移動前の座標を使って判定を行う
-*		ポイント③: X方向の判定は加速度0の時は行わない。加速度0の時も含めてしまうとジャンプ時や落下時に壁に引っかかる。
-*/
+// マップとの当たり判定メソッド
 bool Player::collideWithMap() {
 	float l = m_fPl, t = m_fPt, w = m_fPw, h = m_fPh, h_half = h / 2.f;
 
@@ -1040,10 +1014,7 @@ bool Player::collideWithMap() {
 }
 
 
-/**
-* @brief	プレイヤーのx座標を返す
-* @return	プレイヤーのx座標
-*/
+// プレイヤーのx座標を返す
 float Player::getX() {
 	return m_fX;
 }
@@ -1089,10 +1060,7 @@ void Player::setMana(float amount) {
 }
 
 
-/**
-* @brief ダメージメソッド
-* @note	 プレイヤーは被ダメージ時 半透明 & ノックバック
-*/
+// ダメージメソッド
 int Player::damage(float amount) {
 	m_fHP -= amount;
 	m_iPlayerStateFlag &= PFG_JUMP;
@@ -1140,10 +1108,10 @@ void Player::setDrawY(float drawY) {
 }
 
 
-/**
- * @brief	BGを設定してPlayerの環境を準備する
- * @note	PlayerのBG環境を設定する => Playerが描画等に影響を与えるために必要
- */
+/*
+	BGを設定してPlayerの環境を準備する
+	PlayerのBG環境を設定する => Playerが描画等に影響を与えるために必要
+*/
 void Player::resetBG(BG *pBG) {
 	m_pBG = pBG;
 }
@@ -1161,11 +1129,7 @@ void Player::clearVY() {
 }
 
 
-/**
-* @brief プレイヤーの描画X座標を計算するメソッド
-* @return m_fDrawX
-* @note collideWithMap()の後にこのメソッドを呼ぶようにすること
-*/
+// プレイヤーの描画X座標を計算するメソッド
 float Player::calcPlayerDrawX() {
 
 	// プレイヤーを画面中心に描画
@@ -1183,11 +1147,7 @@ float Player::calcPlayerDrawX() {
 }
 
 
-/**
-* @brief プレイヤーの描画Y座標を計算するメソッド
-* @return m_fDrawY
-* @note collideWithMap()の後にこのメソッドを呼ぶようにすること
-*/
+// プレイヤーの描画Y座標を計算するメソッド
 float Player::calcPlayerDrawY() 
 {
 
@@ -1198,7 +1158,7 @@ float Player::calcPlayerDrawY()
 
 
 // TextureにIndexを付与・指定
-// @note: X:0～6,Y:7～16
+// X:0～6,Y:7～16
 float  Player::m_fTextureCoord[] = {
 	// X座標
 	0.f, 50.f, 100.f, 150.f, 200.f, 250.f, 300.f,
@@ -1208,11 +1168,7 @@ float  Player::m_fTextureCoord[] = {
 };
 
 
-/*
-* @brief	Y方向のプレイヤー加速度を制限するメソッド
-* @note		これがないとY方向のマップ移動時にプレイヤーが消える
-*/
-void Player::SetVY(float vy)
+void Player::setVY(float vy)
 {
 	if (vy <= PLAYER_VY_LIMIT)	// -15が最大値
 	{

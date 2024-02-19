@@ -22,12 +22,8 @@ Player *SlashCollision::m_pPlayer = NULL;
 ID2D1SolidColorBrush *SlashCollision::m_pRed = NULL;
 #endif
 
-/**
-* @brief SlashCollisionのコンストラクタ
-* @param[in] attackCount	何段目攻撃かのカウンタ(4:スライディング攻撃)
-* @param[in] faceToRight	向き判定フラグ　	true：右向き  / false：左向き
-* @param[in] shadowFlag		シャドウ判定フラグ　非0：シャドウ /	0：ノーマル	　bit演算で複数のフラグを保存するためint型
-*/
+
+// コンストラクタ
 SlashCollision::SlashCollision(int attackCount, bool faceToRight, int shadowFlag)
 {
 	float shadowLength = SHADOW_START_LENGTH;
@@ -103,11 +99,7 @@ SlashCollision::~SlashCollision()
 }
 
 
-/**
-* @brief SlashCollisionの生死
-* @note	 生存時間を過ぎると消滅
-* return true:生存 / false:死亡
-*/
+// SlashCollisionの生死
 bool SlashCollision::move() {
 	m_iLifeTime++;
 	m_fX = m_pPlayer->getX() + m_fXOffSet;
@@ -120,9 +112,7 @@ bool SlashCollision::move() {
 }
 
 
-/**
-* @brief 描画メソッド
-*/
+// 描画メソッド
 void SlashCollision::draw(ID2D1RenderTarget *pRenderTarget) {
 #ifdef _DEBUG
 	D2D1_RECT_F rc;		// 描画領域(画面上での位置やサイズ)を指定する変数
@@ -135,14 +125,7 @@ void SlashCollision::draw(ID2D1RenderTarget *pRenderTarget) {
 }
 
 
-/**
-* @brief 矩形との当たり判定メソッド
-* @param[in] x 左上のx座標
-* @param[in] y 左上のy座標
-* @param[in] w 矩形のWidth
-* @param[in] h 矩形のHeight
-* @return true:当たり / false:外れ
-*/
+// 矩形との当たり判定メソッド
 bool SlashCollision::collide(float x, float y, float w, float h) { 
 
 	if (m_fX > x + w)
@@ -158,52 +141,31 @@ bool SlashCollision::collide(float x, float y, float w, float h) {
 }
 
 
-/**
-* @brief 他ゲームオブジェクトとの当たり判定メソッド
-* @param[in] *pObj 他ゲームオブジェクト
-* @return true:当たり / false:外れ
-*/
+// 他ゲームオブジェクトとの当たり判定メソッド
 bool SlashCollision::collide(IGameObject *pObj) { 
 	return true;
 }
 
 
-/**
-* @brief マップとの当たり判定メソッド
-* @note	ここで当たり判定に従って(x, y)座標の更新を行う
-*		X方向とY方向で分離して判定。
-*		ポイント①: それぞれ加速度の正負で左右、上下に判定を分ける
-*		ポイント②: 判定する方向のみ座標を移動させ、判定しない方向は移動前の座標を使って判定を行う
-*		ポイント③: X方向の判定は加速度0の時は行わない。加速度0の時も含めてしまうとジャンプ時や落下時に壁に引っかかる。
-*/
+// マップとの当たり判定メソッド
 bool SlashCollision::collideWithMap() { return true; }
 
 
-/**
-* @brief ダメージメソッド
-*/
+// ダメージメソッド
 int SlashCollision::damage(float amount) {
 	m_iLifeTime = SLASH_DAMAGE_LIFE_TIME;
 	return SLASH_RETURN_DAMAGE;
 }
 
 
-/**
-* @fn
-* @brief	共有メディアファイルの読み込み
-* @note		シーン開始時などに呼び出すようにする
-*/
+// 共有メディアファイルの読み込み
 void SlashCollision::Restore(Player *pPlayer) {
 	m_pPlayer = NULL;
 	m_pPlayer = pPlayer;
 }
 
 
-/**
-* @fn
-* @brief	共有メディアファイルの読み込み
-* @note		シーン開始時などに呼び出すようにする
-*/
+// 共有メディアファイルの読み込み
 #ifdef _DEBUG
 void SlashCollision::Restore(Player *pPlayer, ID2D1RenderTarget *pRT) {
 	//--- SAFE_RELEASE(o) if (o){ (o)->Release(); o = NULL; }
@@ -215,11 +177,7 @@ void SlashCollision::Restore(Player *pPlayer, ID2D1RenderTarget *pRT) {
 #endif
 
 
-/**
-* @fn
-* @brief	共有メディアファイルの消去
-* @note		シーン削除時などに呼び出すようにする
-*/
+// 共有メディアファイルの消去
 void SlashCollision::Finalize() {
 	m_pPlayer = NULL;
 

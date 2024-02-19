@@ -23,11 +23,7 @@
 ID2D1Bitmap *GateKeeper::m_pImage = NULL;
 
 
-/**
-* @brief GateKeeperのコンストラクタ
-* @param[in] x	ゲートキーパーのx座標
-* @param[in] y	ゲートキーパーのy座標
-*/
+// コンストラクタ
 GateKeeper::GateKeeper(Stage *pStage,float x,float y)
 {
 	m_pParent = pStage;
@@ -42,11 +38,7 @@ GateKeeper::~GateKeeper()
 }
 
 
-/**
-* @fn
-* @brief	共有メディアファイルの読み込み
-* @note		シーン開始時などに呼び出すようにする
-*/
+// 共有メディアファイルの読み込み
 void GateKeeper::Restore(ID2D1RenderTarget *pTarget) {
 	SAFE_RELEASE(m_pImage);
 	// 画像をメモリに読み込む
@@ -54,19 +46,13 @@ void GateKeeper::Restore(ID2D1RenderTarget *pTarget) {
 }
 
 
-/**
-* @fn
-* @brief	共有メディアファイルの消去
-* @note		シーン削除時などに呼び出すようにする
-*/
+// 共有メディアファイルの消去
 void GateKeeper::Finalize() {
 	SAFE_RELEASE(m_pImage);
 }
 
 
-/**
-* @brief 描画メソッド
-*/
+// 描画メソッド
 void GateKeeper::draw(ID2D1RenderTarget *pRenderTarget) {
 	float distX = m_fX - m_pParent->m_fPlayerX;
 	float distY = m_fY - m_pParent->m_fPlayerY;

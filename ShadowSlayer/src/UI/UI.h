@@ -11,10 +11,26 @@ struct ID2D1RenderTarget;
 class UI
 {
 public:
+	/**
+	* @brief UIのコンストラクタ
+	*/
 	UI(Player *pPlayer, ID2D1RenderTarget *pRenderTarget);
-	virtual ~UI();
-	virtual void move();	// UIの動作　他のオブジェクトと違い、消滅なし
-	virtual void draw(ID2D1RenderTarget *pRenderTarget);	// 描画メソッド
+
+	/**
+	* @brief UIのコンストラクタ
+	*/
+	~UI();
+
+	/**
+	* @brief UIの動作
+	* @note  他のオブジェクトと違い、消滅なし
+	*/
+	void move();
+
+	/**
+	* @brief 描画メソッド
+	*/
+	void draw(ID2D1RenderTarget *pRenderTarget);
 protected:
 	Player		*m_pPlayer;
 	ID2D1Bitmap *m_pBarFrameTexture;
