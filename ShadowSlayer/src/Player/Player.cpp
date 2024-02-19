@@ -1,23 +1,23 @@
 // Windowsアプリケーション開発用の共通ヘッダファイル
-#include "stdafx.h"
+#include "..\stdafx\stdafx.h"
 // Direct2Dのヘッダファイルをインクルード
 #include <d2d1.h>
 // プレイヤーキャラクターとその関連情報を定義したクラスと定数/列挙型の定義
 #include "Player.h"
 // ゲーム内のステージ関連クラスと列挙型の定義
-#include "Stage.h"
+#include "..\Stage\Stage.h"
 // テクスチャとビットマップの読み込みと管理に関するクラスとインターフェースを定義
-#include "TextureLoader.h"
+#include "..\TextureLoader\TextureLoader.h"
 // ゲームの背景を管理するクラスと関連データを定義
-#include "BG.h"
+#include "..\BG\BG.h"
 // 弾クラスの宣言
-#include "Shot.h"
+#include "..\Shot\Shot.h"
 // スラッシュコリジョン（プレイヤーの攻撃の当たり判定）クラスの宣言
-#include "SlashCollision.h"
+#include "..\SlashCollision\SlashCollision.h"
 // 定数値を定めたヘッダファイル
-#include "Constants.h"
+#include "..\Constants.h"
 // enum変数宣言用フォルダ
-#include "Enums.h"
+#include "..\Enums.h"
 
 
 /**

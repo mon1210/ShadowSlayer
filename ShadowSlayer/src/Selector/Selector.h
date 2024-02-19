@@ -6,7 +6,7 @@
 
 //--- ヘッダガードで、同じヘッダファイルが複数回インクルードされることによる問題を防いでいる
 #ifndef __IGAMESCENE_H__
-#include "IGameScene.h"
+#include "..\IGameSceen\IGameScene.h"
 #endif
 
 enum GamePhase {

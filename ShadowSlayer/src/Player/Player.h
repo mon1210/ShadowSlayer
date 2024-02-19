@@ -2,7 +2,7 @@
 * @file Player.h
 * @brief ƒNƒ‰ƒX CPlayer ‚ÌéŒ¾
 */
-#include "IGameObject.h"
+#include "..\IGameObject\IGameObject.h"
 
 class Stage;
 class BG;

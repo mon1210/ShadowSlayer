@@ -4,7 +4,7 @@
 */
 
 // Windowsアプリケーション開発用の共通ヘッダファイル
-#include "stdafx.h"
+#include "..\stdafx\stdafx.h"
 // ゲームシーンの共通インターフェースと関連するプリプロセッサテクニック
 #include "IGameScene.h"
 

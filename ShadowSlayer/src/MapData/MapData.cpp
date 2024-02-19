@@ -1,5 +1,5 @@
 // Windowsアプリケーション開発用の共通ヘッダファイル
-#include "stdafx.h"
+#include "..\stdafx\stdafx.h"
 // ゲーム内のマップデータを定義
 #include "MapData.h"
 

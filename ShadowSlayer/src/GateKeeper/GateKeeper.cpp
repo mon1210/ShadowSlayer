@@ -1,15 +1,15 @@
 // Windowsアプリケーション開発用の共通ヘッダファイル
-#include "stdafx.h"
+#include "..\stdafx\stdafx.h"
 // Direct2Dのヘッダファイルをインクルード
 #include <d2d1.h>
 // ゲーム内のステージ関連クラスと列挙型の定義
-#include "Stage.h"
+#include "..\Stage\Stage.h"
 // ゲートキーパーオブジェクトに関するヘッダファイル
 #include "GateKeeper.h"
 // テクスチャとビットマップの読み込みと管理に関するクラスとインターフェースを定義
-#include "TextureLoader.h"
+#include "..\TextureLoader\TextureLoader.h"
 // 定数値を定めたヘッダファイル
-#include "Constants.h"
+#include "..\Constants.h"
 
 
 //	macros

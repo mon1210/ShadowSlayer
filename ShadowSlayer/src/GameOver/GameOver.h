@@ -2,7 +2,7 @@
 * @file GameOver.h
 * @brief ƒNƒ‰ƒX CGameOVer ‚ÌéŒ¾
 */
-#include "IGameScene.h"
+#include "..\IGameSceen\IGameScene.h"
 
 enum GameOverPhase {
 	GAMEOVER_INIT = 0,

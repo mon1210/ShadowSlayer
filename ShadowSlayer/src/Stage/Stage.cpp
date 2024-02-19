@@ -1,5 +1,5 @@
 // Windowsアプリケーション開発用の共通ヘッダファイル
-#include "stdafx.h"
+#include "..\stdafx\stdafx.h"
 // Direct2Dのヘッダファイルをインクルード
 #include <d2d1.h>
 //双方向リスト (Doubly Linked List) データ構造を提供
@@ -7,25 +7,25 @@
 // ゲーム内のステージ関連クラスと列挙型の定義
 #include "Stage.h"
 // テクスチャとビットマップの読み込みと管理に関するクラスとインターフェースを定義
-#include "TextureLoader.h"
+#include "..\TextureLoader\TextureLoader.h"
 // プレイヤーキャラクターとその関連情報を定義したクラスと定数/列挙型の定義
-#include "Player.h"
+#include "..\Player\Player.h"
 // ゲームの背景を管理するクラスと関連データを定義
-#include "BG.h"
+#include "..\BG\BG.h"
 // 弾クラスの宣言
-#include "Shot.h"
+#include "..\Shot\Shot.h"
 // 敵キャラクターセットアップと管理に関するクラスとデータの定義
-#include "EnemySet.h"
+#include "..\EnemySet\EnemySet.h"
 // スラッシュコリジョン（プレイヤーの攻撃の当たり判定）クラスの宣言
-#include "SlashCollision.h"
+#include "..\SlashCollision\SlashCollision.h"
 // 敵の攻撃とプレイヤーの当たり判定処理を行うクラスと関連する定数・列挙型の定義
-#include "EnemyAttackCollision.h"
+#include "..\EnemyAttackCollision\EnemyAttackCollision.h"
 // ゲートキーパーオブジェクトに関するヘッダファイル
-#include "GateKeeper.h"
+#include "..\GateKeeper\GateKeeper.h"
 // プレイヤーのUI要素を管理する
-#include "UI.h"
+#include "..\UI\UI.h"
 // 定数値を定めたヘッダファイル
-#include "Constants.h"
+#include "..\Constants.h"
 
 
 /**

@@ -13,5 +13,213 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{7ae0deed-c58d-479d-835c-290c47dd3081}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\BG">
+      <UniqueIdentifier>{34456a9d-ce1d-43ef-81f0-ecf10ef86b90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ddsfunctions">
+      <UniqueIdentifier>{87529afd-ef8c-4663-9464-f0d0463ef301}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Enemy01">
+      <UniqueIdentifier>{2cda7504-372f-4ddb-8d2c-6cde0a7fcb51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\EnemyAttackCollision">
+      <UniqueIdentifier>{4cffdf80-47f2-456b-a6d1-3107f62c4b6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\EnemySet">
+      <UniqueIdentifier>{7b7e2947-df50-4bb6-9422-38c2f3f511aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\GameOver">
+      <UniqueIdentifier>{168b17a1-e2b7-4722-aba4-a73c63c0a6dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\GateKeeper">
+      <UniqueIdentifier>{202ec1e1-fc26-42e7-89a0-7cb023f1b726}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\IGameObject">
+      <UniqueIdentifier>{df5f35fa-52cd-4f4e-8188-ffa0e26a18ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\IGameSceen">
+      <UniqueIdentifier>{33bd4a82-7a3c-4b08-b079-a923d71077de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Main">
+      <UniqueIdentifier>{b1cd2343-742c-4d61-b8cd-b985b38e4764}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\MapData">
+      <UniqueIdentifier>{45ee9f4e-b4c8-4c0e-bce5-08c5a426d7c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Player">
+      <UniqueIdentifier>{b9e6e9e3-1949-4ae5-8d7c-a7409e9de947}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Seletor">
+      <UniqueIdentifier>{0c88e74e-77ce-4cd0-acd1-68e91f8530e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Shot">
+      <UniqueIdentifier>{8ec6d6b4-e475-441a-8e2d-d62500228b9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\SlashCollision">
+      <UniqueIdentifier>{478c03a8-e2ef-41b4-81a4-798629587376}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Stage">
+      <UniqueIdentifier>{c63f69c6-e278-4a9c-9ccd-faf54a9a0202}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\stdafx">
+      <UniqueIdentifier>{62fdd903-92ed-432e-935c-46e5b1e740c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\TextureLoader">
+      <UniqueIdentifier>{f30cbf68-a511-4f97-9bd5-dc13abae6a14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\tgafunctions">
+      <UniqueIdentifier>{36eaa6f0-231d-4353-b341-9917254a5068}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Title">
+      <UniqueIdentifier>{9df9fbc0-472c-474c-aa5e-b8e8164ad773}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\UI">
+      <UniqueIdentifier>{0c67de93-3ec0-4e75-89da-96b9889d4eed}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\BG\BG.cpp">
+      <Filter>src\BG</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ddsfunctions\ddsfunctions.cpp">
+      <Filter>src\ddsfunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Enemy01\Enemy01.cpp">
+      <Filter>src\Enemy01</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EnemyAttackCollision\EnemyAttackCollision.cpp">
+      <Filter>src\EnemyAttackCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EnemySet\EnemySet.cpp">
+      <Filter>src\EnemySet</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameOver\GameOver.cpp">
+      <Filter>src\GameOver</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GateKeeper\GateKeeper.cpp">
+      <Filter>src\GateKeeper</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IGameObject\IGameObject.cpp">
+      <Filter>src\IGameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IGameSceen\IGameScene.cpp">
+      <Filter>src\IGameSceen</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Main\Main.cpp">
+      <Filter>src\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MapData\MapData.cpp">
+      <Filter>src\MapData</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UI\UI.cpp">
+      <Filter>src\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Title\Title.cpp">
+      <Filter>src\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tgafunctions\tgafunctions.cpp">
+      <Filter>src\tgafunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TextureLoader\TextureLoader.cpp">
+      <Filter>src\TextureLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stdafx\stdafx.cpp">
+      <Filter>src\stdafx</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Stage\Stage.cpp">
+      <Filter>src\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SlashCollision\SlashCollision.cpp">
+      <Filter>src\SlashCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Shot\Shot.cpp">
+      <Filter>src\Shot</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Selector\Selector.cpp">
+      <Filter>src\Seletor</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Player\Player.cpp">
+      <Filter>src\Player</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\BG\BG.h">
+      <Filter>src\BG</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ddsfunctions\ddsfunctions.h">
+      <Filter>src\ddsfunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Enemy01\Enemy01.h">
+      <Filter>src\Enemy01</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EnemyAttackCollision\EnemyAttackCollision.h">
+      <Filter>src\EnemyAttackCollision</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EnemySet\EnemySet.h">
+      <Filter>src\EnemySet</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameOver\GameOver.h">
+      <Filter>src\GameOver</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GateKeeper\GateKeeper.h">
+      <Filter>src\GateKeeper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IGameObject\IGameObject.h">
+      <Filter>src\IGameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IGameSceen\IGameScene.h">
+      <Filter>src\IGameSceen</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Main\Main.h">
+      <Filter>src\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MapData\MapData.h">
+      <Filter>src\MapData</Filter>
+    </ClInclude>
+    <ClInclude Include="src\UI\UI.h">
+      <Filter>src\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Title\Title.h">
+      <Filter>src\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tgafunctions\tgafunctions.h">
+      <Filter>src\tgafunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TextureLoader\TextureLoader.h">
+      <Filter>src\TextureLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stdafx\stdafx.h">
+      <Filter>src\stdafx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Stage\Stage.h">
+      <Filter>src\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SlashCollision\SlashCollision.h">
+      <Filter>src\SlashCollision</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shot\Shot.h">
+      <Filter>src\Shot</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Selector\Selector.h">
+      <Filter>src\Seletor</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Player\Player.h">
+      <Filter>src\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Constants.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Enums.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Resource.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\targetver.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

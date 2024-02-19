@@ -1,15 +1,15 @@
 // Windowsアプリケーション開発用の共通ヘッダファイル
-#include "stdafx.h"
+#include "..\stdafx\stdafx.h"
 // Direct2Dのヘッダファイルをインクルード
 #include <d2d1.h>
 // プレイヤーキャラクターとその関連情報を定義したクラスと定数/列挙型の定義
-#include "Player.h"
+#include "..\Player\Player.h"
 // プレイヤーのUI要素を管理する
 #include "UI.h"
 // テクスチャとビットマップの読み込みと管理に関するクラスとインターフェースを定義
-#include "TextureLoader.h"
+#include "..\TextureLoader\TextureLoader.h"
 // 定数値を定めたヘッダファイル
-#include "Constants.h"
+#include "..\Constants.h"
 
 
 //  マクロ定義

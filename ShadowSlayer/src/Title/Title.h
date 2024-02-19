@@ -2,7 +2,7 @@
 * @file Title.h
 * @brief ƒNƒ‰ƒX CTitle ‚ÌéŒ¾
 */
-#include "IGameScene.h"
+#include "..\IGameSceen\IGameScene.h"
 
 
 enum TitlePhase {
