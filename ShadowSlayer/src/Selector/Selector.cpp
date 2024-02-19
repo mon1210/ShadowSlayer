@@ -1,8 +1,3 @@
-/**
-* @file Selector.cpp
-* @brief クラスCSelectorの実装ファイル
-*/
-
 // Windowsアプリケーション開発用の共通ヘッダファイル
 #include "..\stdafx\stdafx.h"
 // Direct2Dのヘッダファイルをインクルード
@@ -23,9 +18,7 @@
 #include "..\Constants.h"
 
 
-/**
-* @brief Selectorのコンストラクタ
-*/
+// コンストラクタ
 Selector::Selector(ID2D1RenderTarget *pRenderTarget)
 {
 	m_pRenderTarget = pRenderTarget;
@@ -84,10 +77,7 @@ Selector::~Selector()
 }
 
 
-/**
-* @brief 全体のアニメートを行う関数
-*
-*/
+// 全体のアニメートを行う
 void Selector::doAnim() {
 	GameSceneResultCode rc = GAMESCENE_DEFAULT;
 
@@ -126,9 +116,7 @@ void Selector::doAnim() {
 }
 
 
-/**
-* @brief 全体の描画を行う関数
-*/
+// 全体の描画を行う
 void Selector::doDraw(ID2D1RenderTarget *pRenderTarget) {
 
 	// 1バイトのビット数(2^8)
@@ -156,22 +144,14 @@ void Selector::doDraw(ID2D1RenderTarget *pRenderTarget) {
 }
 
 
-/**
-* @method
-* @brief ゲーム画面用のRenderTarget を返す
-* @note	このメソッドが返した ID2D1RenderTarget は必ずRelease すること
-*/
+// ゲーム画面用のRenderTarget を返す
 ID2D1RenderTarget *Selector::GetRenderTarget() {
 	m_pRenderTarget->AddRef();
 	return m_pRenderTarget;
 }
 
 
-/**
-* @method
-* @brief	デバッグ用のTextFormat を返す
-* @note		このメソッドが返した IDWriteTextFormat は必ずRelease すること
-*/
+// デバッグ用のTextFormat を返す
 IDWriteTextFormat *Selector::GetTextFormat() {
 	m_pTextFormat->AddRef();
 	return m_pTextFormat;

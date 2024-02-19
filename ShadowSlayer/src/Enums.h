@@ -1,9 +1,58 @@
 /**
-* @file		Enums.h
-* @brief	eunm変数宣言用ヘッダファイル
-* @note		主にTexture関係
+* @file	 Enums.h
+* @brief eunm変数宣言用ヘッダファイル
+* @note	 主にTexture関係
 */
 #pragma once
+
+enum GameOverPhase {
+	GAMEOVER_INIT = 0,
+	GAMEOVER_RUN = 1,
+	GAMEOVER_FADE = 2,
+	GAMEOVER_DONE = 3
+};
+
+enum GamePhase {
+	GAMEPHASE_INIT = 0,
+	GAMEPHASE_RESET = 1,
+	GAMEPHASE_TITLE = 0x010,
+	GAMEPHASE_GAME = 0x100,
+	GAMEPHASE_GAMEOVER = 0x200
+};
+
+enum GameSceneResultCode {
+	GAMESCENE_DEFAULT = 0,
+	GAMESCENE_END_OK = 1,
+	GAMESCENE_END_TIMEOUT = 2,
+	GAMESCENE_END_FAILURE = 3
+};
+
+enum StagePhase {
+	STAGE_INIT = 0,
+	STAGE_RUN = 1,
+	STAGE_PAUSE = 2,
+	STAGE_FADE = 3,
+	STAGE_DONE = 4,
+	STAGE_MAPCHANGE_X = 5,
+	STAGE_MAPCHANGE_Y = 6,
+	STAGE_MAPCHANGE_DONE = 7,
+};
+
+enum MapNum
+{
+	DEFAULT_STAGE = 0,
+	RIGHT_STAGE = 1,
+	UNDER_STAGE = 2,
+	UPPER_STAGE = 3,
+
+};
+
+enum TitlePhase {
+	TITLE_INIT = 0,
+	TITLE_RUN = 1,
+	TITLE_FADE = 2,
+	TITLE_DONE = 3
+};
 
 enum EnemyTexture
 {

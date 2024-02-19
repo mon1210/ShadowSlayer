@@ -21,9 +21,7 @@
 #define SAFE_DELETE_ARRAY(o) if (o){ delete [] (o); o = NULL; }
 
 
-/**
-* @brief UIのコンストラクタ
-*/
+// コンストラクタ
 UI::UI(Player *pPlayer, ID2D1RenderTarget *pRenderTarget)
 {
 	m_pPlayer = pPlayer;
@@ -50,10 +48,7 @@ UI::~UI()
 }
 
 
-/**
-* @brief UIの動作
-* @note  他のオブジェクトと違い、消滅なし
-*/
+// UIの動作
 void UI::move() {
 	//	HPバー
 	if (m_fHPRatio > m_pPlayer->getHP()) {
@@ -73,9 +68,7 @@ void UI::move() {
 }
 
 
-/**
-* @brief 描画メソッド
-*/
+// 描画メソッド
 void UI::draw(ID2D1RenderTarget *pRenderTarget) {
 	D2D1_RECT_F rc,		// 描画領域(画面上での位置やサイズ)を指定する変数
 				src;	// テクスチャの中での座標を指定し、テクスチャを決定する変数

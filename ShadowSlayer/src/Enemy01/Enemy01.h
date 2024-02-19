@@ -1,7 +1,7 @@
 /**
-* @file	CEnemy01.h
-* @brief クラス CEnemy01(スライム) の宣言
-* @note	当たり判定 32 x 25.5
+* @file	 Enemy01.h
+* @brief クラス Enemy01(スライム) の宣言
+* @note	 当たり判定 32 x 25.5
 */
 #include "..\IGameObject\IGameObject.h"
 
@@ -13,16 +13,74 @@ struct ID2D1SolidColorBrush;
 class Enemy01 : public IGameObject
 {
 public:
+	/**
+	* @brief Enemy01のコンストラクタ
+	* @param[in] x	エネミーのx座標
+	* @param[in] y	エネミーのy座標
+	*/
 	Enemy01(Stage *pParent, float x, float y);
+
+	/**
+	* @brief Enemy01のデストラクタ
+	*/
 	~Enemy01();
-	virtual bool move() override;	// 行動状態,アニメーションを管理するメソッド	true:生存 / false:死亡
-	virtual void draw(ID2D1RenderTarget *pRenderTarget) override;		// 描画メソッド
-	virtual bool collide(float x, float y, float w, float h) override;	// 矩形との当たり判定メソッド	true:当たり / false:外れ
-	virtual bool collide(IGameObject *pObj) override;	// 他ゲームオブジェクトとの当たり判定メソッド	true:当たり / false:外れ
-	virtual bool collideWithMap() override;				// マップとの当たり判定メソッド　当たり判定に従って(x, y)座標の更新を行う
-	virtual int damage(float amount) override;			// ダメージメソッド (return ダメージ)
-	static void Restore(ID2D1RenderTarget *pRT, BG *pBG);	// 共有メディアファイルの読み込み　シーン開始時などに呼び出すようにする
-	static void Finalize();		// 共有メディアファイルの消去　シーン削除時などに呼び出すようにする
+
+	/**
+	* @brief Enemy01のアニメーション
+	* @note	 ダメージを受けると死亡
+	* return true:生存 / false:死亡
+	*/
+	bool move() override;
+
+	/**
+	* @brief 描画メソッド
+	*/
+	void draw(ID2D1RenderTarget *pRenderTarget) override;
+
+	/**
+	* @brief 矩形との当たり判定メソッド
+	* @param[in] x 左上のx座標
+	* @param[in] y 左上のy座標
+	* @param[in] w 矩形のWidth
+	* @param[in] h 矩形のHeight
+	* @return true:当たり / false:外れ
+	*/
+	bool collide(float x, float y, float w, float h) override;
+
+	/**
+	* @brief 他ゲームオブジェクトとの当たり判定メソッド
+	* @param[in] *pObj 他ゲームオブジェクト
+	* @return true:当たり / false:外れ
+	*/
+	bool collide(IGameObject *pObj) override;
+
+	/**
+	* @brief マップとの当たり判定メソッド
+	* @note	ここで当たり判定に従って(x, y)座標の更新を行う
+	*		X方向とY方向で分離して判定。
+	*		ポイント①: それぞれ加速度の正負で左右、上下に判定を分ける
+	*		ポイント②: 判定する方向のみ座標を移動させ、判定しない方向は移動前の座標を使って判定を行う
+	*		ポイント③: X方向の判定は加速度0の時は行わない。加速度0の時も含めてしまうとジャンプ時や落下時に壁に引っかかる。
+	*/
+	bool collideWithMap() override;
+
+	/**
+	* @brief ダメージメソッド
+	*/
+	int damage(float amount) override;
+
+	/**
+	* @fn
+	* @brief 共有メディアファイルの読み込み
+	* @note	 シーン開始時などに呼び出すようにする
+	*/
+	static void Restore(ID2D1RenderTarget *pRT, BG *pBG);
+
+	/**
+	* @brief	共有メディアファイルの消去
+	* @note		シーン削除時などに呼び出すようにする
+	*/
+	static void Finalize();
 protected:
 	Stage	*m_pParent;
 	float	m_fX, m_fY, m_fY_prev;

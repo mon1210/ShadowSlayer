@@ -38,11 +38,7 @@ ID2D1SolidColorBrush *Enemy01::m_pWhite = NULL;
 #endif
 
 
-/**
-* @brief Enemy01のコンストラクタ
-* @param[in] x	エネミーのx座標
-* @param[in] y	エネミーのy座標
-*/
+// コンストラクタ
 Enemy01::Enemy01(Stage *pParent, float x, float y)
 {
 	m_pParent = pParent;
@@ -68,11 +64,7 @@ Enemy01::~Enemy01()
 }
 
 
-/**
-* @brief Enemy01のアニメーション
-* @note	 ダメージを受けると死亡
-* return true:生存 / false:死亡
-*/
+// Enemy01のアニメーション
 bool Enemy01::move() {
 	// 挙動カウンタ(テクスチャ等も管理)
 	m_iCount++;
@@ -143,9 +135,7 @@ bool Enemy01::move() {
 }
 
 
-/**
-* @brief 描画メソッド
-*/
+// 描画メソッド
 void Enemy01::draw(ID2D1RenderTarget *pRenderTarget) {
 
 	D2D1_RECT_F rc, 	// 描画領域(画面上での位置やサイズ)を指定する変数
@@ -223,14 +213,7 @@ void Enemy01::draw(ID2D1RenderTarget *pRenderTarget) {
 }
 
 
-/**
-* @brief 矩形との当たり判定メソッド
-* @param[in] x 左上のx座標
-* @param[in] y 左上のy座標
-* @param[in] w 矩形のWidth
-* @param[in] h 矩形のHeight
-* @return true:当たり / false:外れ
-*/
+// 矩形との当たり判定メソッド
 bool Enemy01::collide(float x, float y, float w, float h) {
 
 	if (m_fX - ENEMY_TEXTURE_W_HALF > x + w)
@@ -246,25 +229,14 @@ bool Enemy01::collide(float x, float y, float w, float h) {
 }
 
 
-/**
-* @brief 他ゲームオブジェクトとの当たり判定メソッド
-* @param[in] *pObj 他ゲームオブジェクト
-* @return true:当たり / false:外れ
-*/
+// 他ゲームオブジェクトとの当たり判定メソッド
 bool Enemy01::collide(IGameObject *pObj) {
 
 	return pObj->collide(m_fX - ENEMY_TEXTURE_W_HALF, m_fY - ENEMY_TEXTURE_HEIGHT, ENEMY_TEXTURE_WIDTH, ENEMY_TEXTURE_H_HALF);
 }
 
 
-/**
-* @brief マップとの当たり判定メソッド
-* @note	ここで当たり判定に従って(x, y)座標の更新を行う
-*		X方向とY方向で分離して判定。
-*		ポイント①: それぞれ加速度の正負で左右、上下に判定を分ける
-*		ポイント②: 判定する方向のみ座標を移動させ、判定しない方向は移動前の座標を使って判定を行う
-*		ポイント③: X方向の判定は加速度0の時は行わない。加速度0の時も含めてしまうとジャンプ時や落下時に壁に引っかかる。
-*/
+// マップとの当たり判定メソッド
 bool Enemy01::collideWithMap() {
 	float l = m_fX - ENEMY_TEXTURE_W_HALF, t = m_fY - ENEMY_TEXTURE_H_HALF, w = ENEMY_TEXTURE_WIDTH, h = ENEMY_TEXTURE_H_HALF;
 	float r = l + ENEMY_TEXTURE_WIDTH, b = m_fY;
@@ -357,9 +329,7 @@ bool Enemy01::collideWithMap() {
 }
 
 
-/**
-* @brief ダメージメソッド
-*/
+// ダメージメソッド
 int Enemy01::damage(float amount) {
 	m_iEnemyStateFlag = 0;
 	m_iEnemyStateFlag |= EFG_DEATH;		// 死亡状態へ
@@ -368,11 +338,7 @@ int Enemy01::damage(float amount) {
 }
 
 
-/**
-* @fn
-* @brief	共有メディアファイルの読み込み
-* @note		シーン開始時などに呼び出すようにする
-*/
+// 共有メディアファイルの読み込み
 void Enemy01::Restore(ID2D1RenderTarget *pRT, BG *pBG) {
 	SAFE_RELEASE(m_pTexture);
 	SAFE_RELEASE(m_pTexture_Left);
@@ -390,11 +356,7 @@ void Enemy01::Restore(ID2D1RenderTarget *pRT, BG *pBG) {
 }
 
 
-/**
-* @fn
-* @brief	共有メディアファイルの消去
-* @note		シーン削除時などに呼び出すようにする
-*/
+// 共有メディアファイルの消去
 void Enemy01::Finalize() {
 	SAFE_RELEASE(m_pTexture);
 	SAFE_RELEASE(m_pTexture_Left);

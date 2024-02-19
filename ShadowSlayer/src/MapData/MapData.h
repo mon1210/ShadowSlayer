@@ -1,3 +1,7 @@
+/**
+* @file  MapData.h
+* @brief ƒNƒ‰ƒX MapData ‚ÌéŒ¾
+*/
 #pragma once
 class MapData
 {

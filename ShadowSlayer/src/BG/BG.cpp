@@ -21,9 +21,7 @@
 #define SAFE_DELETE_ARRAY(o) if (o){ delete [] (o); o = NULL; }
 
 
-/**
-* @brief BGのコンストラクタ
-*/
+// コンストラクタ
 BG::BG(ID2D1RenderTarget *pRenderTarget)
 {
 	
@@ -81,10 +79,7 @@ float BG::getMapHight() {
 }
 
 
-/**
-* @brief 描画メソッド
-* @note  画面上に見えている部分のみ描画
-*/
+// 描画メソッド
 void BG::draw(ID2D1RenderTarget *pRenderTarget) {
 	int texCols;	// マップチップ画像の列数
 	D2D1_SIZE_F size;
@@ -176,12 +171,7 @@ void BG::draw(ID2D1RenderTarget *pRenderTarget) {
 }
 
 
-/**
-* @brief 入力された(x, y)座標のブロックの値を返す
-* @param[in] x x座標
-* @param[in] y y座標
-* @return int code = 0 : 当たり判定なし / code != 0 : 当たり判定あり
-*/
+// 入力された(x, y)座標のブロックの値を返す
 int BG::tile_code(float x, float y) {
 	int row, col, index, code;
 	row = (int)y >> MAP_CHIP_SIZE_BITS;
@@ -192,10 +182,7 @@ int BG::tile_code(float x, float y) {
 }
 
 
-/**
-* @brief	mapdataの配列から数値を復元するメソッド
-* @param[in] index	配列の添え字
-*/
+// mapdataの配列から数値を復元する
 int BG::mapdata_decode(int index) {
 	int code;
 	code = map.data[index + FILE_INFO_BYTES] & MASK_BIT_8;
@@ -204,10 +191,7 @@ int BG::mapdata_decode(int index) {
 }
 
 
-/**
-* @brief	入力された(x, y)座標を起点に坂道のベクトルを計算して返す
-* @note		起点から右と左へ順に坂の終わりを捜索する。colから求まるx座標はタイルの左端の座標なので、r_colはそのまま、l_colには+2すること。
-*/
+// 入力された(x, y)座標を起点に坂道のベクトルを計算して返す
 void BG::getStepVector(float x, float y, STEP_VECTOR *step) {
 	int start_row, start_col, index;
 	int r_row, r_col, l_row, l_col;
@@ -323,10 +307,7 @@ void BG::getStepVector(float x, float y, STEP_VECTOR *step) {
 }
 
 
-/**
-* @brief	BGのMAPDATA構造体を更新します。
-* @note		この関数でリセットしたら、m_pPlayer->setMapWidth(m_pBG->getMapWidth()); を忘れずに一度実行すること
-*/
+// BGのMAPDATA構造体を更新
 void BG::resetMapData(int num) {
 
 	switch (num) {

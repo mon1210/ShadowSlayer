@@ -24,12 +24,7 @@ BG	*Shot::m_pBG = NULL;
 #endif
 
 
-/**
-* @brief Shotのコンストラクタ
-* @param[in] x	プレイヤーのx座標
-* @param[in] y	プレイヤーのy座標
-* @param[in] direction	1 or -1
-*/
+// コンストラクタ
 Shot::Shot(Stage *pParent, float x, float y, float direction)
 {
 	m_pParent = pParent;
@@ -51,11 +46,7 @@ Shot::~Shot()
 }
 
 
-/**
-* @brief shotのアニメーション
-* @note	敵やマップにぶつかるか、画面外に出ると消滅
-* return true:生存 / false:死亡
-*/
+// アニメーション
 bool Shot::move() {
 	if (!m_bDamage) {	// 当たっていないとき
 		m_iLifeTimer++;
@@ -78,9 +69,7 @@ bool Shot::move() {
 }
 
 
-/**
-* @brief 描画メソッド
-*/
+// 描画メソッド
 void Shot::draw(ID2D1RenderTarget *pRenderTarget) {
 	
 	float tx, ty;
@@ -156,37 +145,19 @@ void Shot::draw(ID2D1RenderTarget *pRenderTarget) {
 }
 
 
-/**
-* @brief 矩形との当たり判定メソッド
-* @param[in] x 左上のx座標
-* @param[in] y 左上のy座標
-* @param[in] w 矩形のWidth
-* @param[in] h 矩形のHeight
-* @return true:当たり / false:外れ
-*/
+// 矩形との当たり判定メソッド
 bool Shot::collide(float x, float y, float w, float h) {
 	return true;
 }
 
 
-/**
-* @brief 他ゲームオブジェクトとの当たり判定メソッド
-* @param[in] *pObj 他ゲームオブジェクト
-* @return true:当たり / false:外れ
-*/
+// 他ゲームオブジェクトとの当たり判定メソッド
 bool Shot::collide(IGameObject* pObj) {
 	return true;
 }
 
 
-/**
-* @brief マップとの当たり判定メソッド
-* @note	ここで当たり判定に従って(x, y)座標の更新を行う
-*		X方向とY方向で分離して判定。
-*		ポイント①: それぞれ加速度の正負で左右、上下に判定を分ける
-*		ポイント②: 判定する方向のみ座標を移動させ、判定しない方向は移動前の座標を使って判定を行う
-*		ポイント③: X方向の判定は加速度0の時は行わない。加速度0の時も含めてしまうとジャンプ時や落下時に壁に引っかかる。
-*/
+// マップとの当たり判定メソッド
 bool Shot::collideWithMap() {
 	if (m_fVX > 0) {		// 右向き	
 		if (0 != m_pBG->tile_code(m_fX + SHOT_COLLISION_HEIGHT, m_fY)) {
@@ -203,20 +174,14 @@ bool Shot::collideWithMap() {
 }
 
 
-/**
-* @brief ダメージメソッド
-*/
-int Shot::damage(float amount) {
+// ダメージメソッド
+int Shot::damage(float amount){
 	m_bDamage = true;
 	return 1;
 }
 
 
-/**
-* @fn
-* @brief	共有メディアファイルの読み込み
-* @note		シーン開始時などに呼び出すようにする
-*/
+// 共有メディアファイルの読み込み
 void Shot::Restore(ID2D1RenderTarget *pRT, BG *pBG) {
 	m_pBG = NULL;
 	SAFE_RELEASE(m_pTexture);
@@ -232,11 +197,7 @@ void Shot::Restore(ID2D1RenderTarget *pRT, BG *pBG) {
 }
 
 
-/**
-* @fn
-* @brief	共有メディアファイルの消去
-* @note		シーン削除時などに呼び出すようにする
-*/
+// 共有メディアファイルの消去
 void Shot::Finalize() {
 	m_pBG = NULL;
 	SAFE_RELEASE(m_pTexture);
@@ -248,10 +209,7 @@ void Shot::Finalize() {
 }
 
 
-/**
- * @brief	BGを設定してShotの環境を準備する
- * @note	ShotのBG環境を設定する => Shotが描画等影響を与えるために必要
- */
+// BGを設定してShotの環境を準備する
 void Shot::resetBG(BG *pBG) {
 	m_pBG = pBG;
 }

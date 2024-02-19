@@ -1,8 +1,3 @@
-/**
-* @file Title.cpp
-* @brief クラス CTitle の実装
-*/
-
 // Windowsアプリケーション開発用の共通ヘッダファイル
 #include "..\stdafx\stdafx.h"
 // Direct2Dのヘッダファイルをインクルード
@@ -19,9 +14,7 @@
 #include "..\Constants.h"
 
 
-/**
-* @brief Titleのコンストラクタ
-*/
+// コンストラクタ
 Title::Title(Selector *pSystem)
 {
 	ID2D1RenderTarget *pTarget;
@@ -58,10 +51,7 @@ Title::~Title()
 }
 
 
-/**
-* @brief アニメーションメソッド
-* @return GAMESCENE_DEFAULT:継続 / GAMESCENE_END_OK:ゲーム開始
-*/
+// アニメーションメソッド
 GameSceneResultCode Title::move() {
 	switch (m_ePhase) {
 	// タイトル開始
@@ -112,10 +102,7 @@ GameSceneResultCode Title::move() {
 }
 
 
-/**
-* @brief 描画処理
-* @note	 背景は二枚の画像でループしているように見せる
-*/
+// 描画処理
 void Title::draw(ID2D1RenderTarget *pRenderTarget) {
 	int frame;
 	float opacity;

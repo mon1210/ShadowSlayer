@@ -1,7 +1,7 @@
 /**
-* @file		Constants.h
-* @brief	定数を定めたヘッダファイル
-* @note		マジックナンバーの削除
+* @file	 Constants.h
+* @brief 定数を定めたヘッダファイル
+* @note	 マジックナンバーの削除
 */
 #pragma once
 #include "Selector\Selector.h"	// FPS 取得用
