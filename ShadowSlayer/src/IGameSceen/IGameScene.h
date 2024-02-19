@@ -1,5 +1,5 @@
 /**
-* @file IGameScene.h
+* @file  IGameScene.h
 * @brief シーンの基底クラス IGameScene の宣言
 */
 /*

@@ -1,6 +1,6 @@
 /**
-* @file	UI.h
-* @brief	クラス CUI の宣言ファイル
+* @file	 UI.h
+* @brief クラス UI の宣言ファイル
 */
 #pragma once
 

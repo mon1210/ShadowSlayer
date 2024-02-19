@@ -1,6 +1,6 @@
 /**
-* @file Shot.h
-* @brief クラス CShot の宣言ファイル
+* @file  Shot.h
+* @brief クラス Shot の宣言ファイル
 */
 #include "..\IGameObject\IGameObject.h"
 

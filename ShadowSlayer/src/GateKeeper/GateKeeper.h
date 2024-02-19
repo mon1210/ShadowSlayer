@@ -1,3 +1,7 @@
+/**
+* @file  GateKeeper.h
+* @brief ƒNƒ‰ƒX GateKeeper ‚ÌéŒ¾
+*/
 #pragma once
 
 class Stage;

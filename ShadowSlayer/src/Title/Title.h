@@ -1,6 +1,6 @@
 /**
-* @file Title.h
-* @brief クラス CTitle の宣言
+* @file  Title.h
+* @brief クラス Title の宣言
 */
 #include "..\IGameSceen\IGameScene.h"
 

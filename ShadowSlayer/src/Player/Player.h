@@ -1,6 +1,6 @@
 /**
-* @file Player.h
-* @brief クラス CPlayer の宣言
+* @file  Player.h
+* @brief クラス Player の宣言
 */
 #include "..\IGameObject\IGameObject.h"
 

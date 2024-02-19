@@ -1,7 +1,7 @@
 /**
-* @file		Enums.h
-* @brief	eunm変数宣言用ヘッダファイル
-* @note		主にTexture関係
+* @file	 Enums.h
+* @brief eunm変数宣言用ヘッダファイル
+* @note	 主にTexture関係
 */
 #pragma once
 

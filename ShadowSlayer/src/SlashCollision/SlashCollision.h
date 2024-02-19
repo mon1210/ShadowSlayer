@@ -1,5 +1,5 @@
 /**
-* @file SlashCollision.h
+* @file  SlashCollision.h
 * @brief ƒvƒŒƒCƒ„[‚Ì‹ßÚUŒ‚‚Ì“–‚½‚è”»’è
 */
 #include "..\IGameObject\IGameObject.h"

@@ -1,7 +1,7 @@
 /**
-* @file IGameObject.h
+* @file  IGameObject.h
 * @brief ゲーム上のオブジェクトを表現するクラスを汎化したインターフェースの宣言
-* @note 日本のゲーム業界ではタスクと呼ぶ場合がある
+* @note  日本のゲーム業界ではタスクと呼ぶ場合がある
 */
 #pragma once
 #define __IGAMEOBJECT_H__

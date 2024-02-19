@@ -1,8 +1,3 @@
-/**
-* @file Title.cpp
-* @brief クラス CTitle の実装
-*/
-
 // Windowsアプリケーション開発用の共通ヘッダファイル
 #include "..\stdafx\stdafx.h"
 // Direct2Dのヘッダファイルをインクルード

@@ -1,6 +1,6 @@
 /**
-* @file Selector.h
-* @brief クラスCSelectorの宣言ファイル
+* @file  Selector.h
+* @brief クラスSelectorの宣言ファイル
 */
 #pragma once
 

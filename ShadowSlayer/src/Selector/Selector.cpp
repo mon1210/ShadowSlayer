@@ -1,8 +1,3 @@
-/**
-* @file Selector.cpp
-* @brief クラスCSelectorの実装ファイル
-*/
-
 // Windowsアプリケーション開発用の共通ヘッダファイル
 #include "..\stdafx\stdafx.h"
 // Direct2Dのヘッダファイルをインクルード

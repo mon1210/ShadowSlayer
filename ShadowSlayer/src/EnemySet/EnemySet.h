@@ -1,6 +1,6 @@
 /**
-* @file EnemySet.h
-* @brief	クラス CEnemySet の宣言ファイル
+* @file  EnemySet.h
+* @brief クラス EnemySet の宣言ファイル
 */
 #include "..\IGameObject\IGameObject.h"
 

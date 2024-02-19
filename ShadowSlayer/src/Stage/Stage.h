@@ -1,6 +1,6 @@
 /**
-* @file Stage.h
-* @brief クラス CStage の宣言
+* @file  Stage.h
+* @brief クラス Stage の宣言
 */
 #include "..\Selector\Selector.h"
 #include <list>

@@ -1,7 +1,7 @@
 /**
-* @file	CEnemy01.h
-* @brief クラス CEnemy01(スライム) の宣言
-* @note	当たり判定 32 x 25.5
+* @file	 Enemy01.h
+* @brief クラス Enemy01(スライム) の宣言
+* @note	 当たり判定 32 x 25.5
 */
 #include "..\IGameObject\IGameObject.h"
 

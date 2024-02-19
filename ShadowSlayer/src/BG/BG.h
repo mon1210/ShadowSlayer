@@ -1,3 +1,8 @@
+/**
+* @file	 BG.h
+* @brief クラス BG の宣言
+* @note	 背景・マップクラス
+*/
 //ゲーム上のオブジェクトを表現するクラスを汎化したインターフェースの宣言
 #include "..\IGameObject\IGameObject.h"
 

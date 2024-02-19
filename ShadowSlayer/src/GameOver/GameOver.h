@@ -1,6 +1,6 @@
 /**
-* @file GameOver.h
-* @brief クラス CGameOVer の宣言
+* @file  GameOver.h
+* @brief クラス GameOVer の宣言
 */
 #include "..\IGameSceen\IGameScene.h"
 
