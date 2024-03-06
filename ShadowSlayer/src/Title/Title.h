@@ -5,13 +5,6 @@
 #include "..\IGameSceen\IGameScene.h"
 #include "..\Enums.h"
 
-enum TitlePhase {
-	TITLE_INIT = 0,
-	TITLE_RUN = 1,
-	TITLE_FADE = 2,
-	TITLE_DONE = 3
-};
-
 class Selector;
 struct ID2D1Bitmap;
 struct ID2D1SolidColorBrush;
