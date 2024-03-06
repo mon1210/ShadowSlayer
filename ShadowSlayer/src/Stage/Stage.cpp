@@ -79,14 +79,14 @@ Stage::Stage(Selector *pSystem)
 #ifdef _DEBUG
 		SlashCollision::Restore(m_pPlayer, pTarget);
 #else
-		CSlashCollision::Restore(m_pPlayer);
+		SlashCollision::Restore(m_pPlayer);
 #endif
 		m_pSlashCollisions = new std::list<IGameObject*>();
 
 #ifdef _DEBUG
 		EnemyAttackCollision::Restore(m_pPlayer, pTarget);
 #else
-		CEnemyAttackCollision::Restore(m_pPlayer);
+		EnemyAttackCollision::Restore(m_pPlayer);
 #endif
 		m_pEnemyAttackCollisions = new std::list<IGameObject*>();
 
