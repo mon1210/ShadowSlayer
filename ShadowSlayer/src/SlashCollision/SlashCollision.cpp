@@ -28,7 +28,7 @@ SlashCollision::SlashCollision(int attackCount, bool faceToRight, int shadowFlag
 {
 	float shadowLength = SHADOW_START_LENGTH;
 	m_fDamage = SLASH_DAMAGE;
-	//	@C³‰ÓŠ
+
 	if (shadowFlag != 0) {	// ƒVƒƒƒhƒEó‘Ô(true)
 		shadowLength = SHADOW_ON_LENGTH;
 		m_fDamage = SHADOW_SLASH_DAMAGE;
@@ -89,7 +89,7 @@ SlashCollision::SlashCollision(int attackCount, bool faceToRight, int shadowFlag
 	
 	
 	// “–‚½‚è”»’èíœ
-	m_iLifeTime = INVINCIBLE_TIME;	// @C³‰ÓŠ
+	m_iLifeTime = INVINCIBLE_TIME;
 }
 
 

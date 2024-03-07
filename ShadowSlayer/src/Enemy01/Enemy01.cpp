@@ -164,7 +164,7 @@ void Enemy01::draw(ID2D1RenderTarget *pRenderTarget) {
 
 	case EFG_ATTACK:
 		if (m_iCount < 2) {	// UŒ‚‘O
-			Xindex = EnemyTexture::Default_X;		// @C³‰ÓŠ
+			Xindex = EnemyTexture::Default_X;
 		}
 		else if (m_iCount < AT_COLLISION_GENERATE_COUNT) {	// UŒ‚\‚¦
 			Xindex = EnemyTexture::AttackStance_X;

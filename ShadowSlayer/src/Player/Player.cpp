@@ -617,7 +617,6 @@ void Player::draw(ID2D1RenderTarget *pRenderTarget) {
 			return;
 		}
 	}
-	// ---------------------------------------------------- à»â∫Å@@èCê≥â”èä ------------------------------------------------------- //
 	if (!m_bIs_AttackCancel_OK) {
 
 		switch (m_iPlayerStateFlag) {
@@ -723,7 +722,6 @@ void Player::draw(ID2D1RenderTarget *pRenderTarget) {
 		Yindex = 0;
 	}
 
-	// ---------------------------------------------------- à»è„Å@@èCê≥â”èä ------------------------------------------------------- //
 
 	// TextureÇ…ë„ì¸
 	tx = m_fTextureCoord[Xindex];
